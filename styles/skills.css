@@ -1,0 +1,102 @@
+#skills{
+      margin-top: 2rem;
+     
+    h2{
+        position: relative;
+        display: inline;
+        &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 2rem;
+        width: 50%;
+        background-color: var(--btncolor);
+        height: 3px;
+      }
+    }
+  
+   .container{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin: 2rem 0;
+    article{
+        border: 1px solid var(--border);
+        border-radius: 0.5rem;
+        background-color: #1a1f2e51;
+        flex-basis: 12rem;
+        flex-shrink: 0;
+        padding: 0.5rem 1rem;
+        transition: all 200ms ease-in-out;
+        &:hover{ 
+            transform: translateY(-10px);
+    box-shadow: 0 0 var(--shadowb) var(--shadows) rgba(255, 255, 255, 0.1);
+  }
+
+        div{
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+
+             svg{
+                height: 2rem;
+                vertical-align: middle;
+               
+                
+                
+            }
+            #html{
+                fill: var(--btncolor);
+            }
+            #css{
+                fill: var(--btncolor);
+            }
+            #js{
+                fill: #f7c70e;
+            }
+            #tail{
+                fill: #47b2f0;
+            }
+
+             h3{
+             font-size: clamp(0.4rem, 3vw, 0.8rem);
+             
+           
+        }
+        
+        }
+        .level{
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            p{
+                text-align: right;
+                font-size: min(0.6rem, 5vw);
+            }
+            meter{
+                height: 0.6rem;
+                width: 100%;
+                
+              
+            }
+          
+        }
+       
+    }
+    }
+}
+@media(max-width:660px){
+    #skills>.container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+       
+    }
+}
+@media(max-width:450px){
+    #skills>.container{
+       display: grid;
+       grid-template-columns: 1fr;
+    }
+}

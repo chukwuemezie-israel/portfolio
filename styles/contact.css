@@ -1,114 +1,100 @@
-#contact{
-    display: flex;
+#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#contact h2 {
+  text-align: center;
+  font-size: clamp(0.7rem, 6vw, 4rem);
+  text-transform: uppercase;
+  line-height: clamp(1rem, 7vw, 4rem);
+  font-weight: 800;
+  margin: 2rem 0;
+  -webkit-text-stroke-width: clamp(0.5px, 0.3vw, 2px);
+  -webkit-text-stroke-color: var(--btncolor);
+  color: transparent;
+}
+#contact fieldset {
+  border: 2px solid var(--border);
+  border-radius: 1rem;
+  padding: clamp(0.3rem, 5vw, 2rem);
+  display: flex;
+  gap: 5%;
+  background-color: rgba(255, 255, 255, 0.005);
+  transition: all 200ms ease-in-out;
+}
+#contact fieldset:hover {
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.15);
+  background-color: rgba(255, 255, 255, 0.01);
+}
+@media (max-width: 1134px) {
+  #contact fieldset {
     flex-direction: column;
     align-items: center;
-    
-    h2{
-        text-align: center;
-        font-size: clamp(0.7rem, 6vw, 4rem);
-       text-transform: uppercase;
-       line-height: clamp(1rem, 7vw, 4rem);
-       font-weight: 800;
-        margin: 2rem 0;
-        -webkit-text-stroke-width:  clamp(0.5px, 0.3vw, 2px);
-        -webkit-text-stroke-color: var(--btncolor);
-        color: transparent;
-    }
-    fieldset{
-        border: 2px solid var(--border);
-        border-radius: 1rem;
-        padding: clamp(0.3rem, 5vw, 2rem);
-        display: flex;
-        gap: 5%;
-        background-color: rgba(255, 255, 255, 0.016);
-        
-        transition: all 200ms ease-in-out;
-         
-         &:hover{
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.15);
-            background-color:rgba(255, 255, 255, 0.04) ;
-
-         }
-        @media(max-width:1134px){
-        flex-direction: column;
-        align-items: center;
-
-
+  }
 }
-        .img{
-            width: clamp(15rem,80vw,30rem );
-            p{
-                font-size: clamp(0.5rem, 2vw, 1rem);
-                code{
-                    font-weight: 600;
-                }
-            }
-            
-            img{
-              width:40% ;
-               vertical-align: middle;
-              
-            }
-        }
-        legend{
-            font-weight: 800;
-            font-size: clamp(0.5rem, 4vw, 1rem);
-            background-color: var(--btncolor);
-            padding: 1rem 2rem;
-            border-radius: 0.5rem;
-          
-        }
-          form{
-           
-          
-                label{
-                    color: white;
-                }
-                input{
-                    padding:  0.5rem;
-                    font-size: 1rem;
-                    accent-color: var(--btncolor);
-                    color: white;
-                    background-color: transparent;
-                    border: 1px solid var(--input);
-                    border-radius: 0.3rem;
-                   width: clamp(3rem, 70vw, 25rem);
-                    caret-color: var(--btncolor);
-                    margin: 0.4rem 0 1rem 0;
-                    &:focus{
-                        outline:2px solid var(--btncolor) ;
-                     
-                    }
-                    &::placeholder{
-                        color: rgba(212, 208, 208, 0.531);
-                    }
-                }
-
-                
-                select{
-                    padding: 0.5rem 1.5rem;
-                    font-size: 1rem;
-                    border: 1px solid var(--btncolor);
-                 
-                    border-radius: 0.3rem;
-                    margin-top: 1rem;
-                      background-color: var(--btncolor);
-                        color: var(--bg);
-                    option{
-                         font-size: clamp(0.5rem, 2.5vw, 1rem);
-                           background-color: var(--bg);
-                           color: gray;
-                    }
-                    &:hover{
-                         background-color: var(--bg);
-                    color: var(--btncolor);
-                      
-                    }
-                    &:focus{
-                        outline: 2px solid var(--btncolor);
-                    }
-                }
-
-            }
-    }
+#contact fieldset .img {
+  width: clamp(15rem, 80vw, 30rem);
 }
+#contact fieldset .img p {
+  font-size: clamp(0.5rem, 2vw, 1rem);
+}
+#contact fieldset .img p code {
+  font-weight: 600;
+}
+#contact fieldset .img img {
+  width: 40%;
+  vertical-align: middle;
+}
+#contact fieldset legend {
+  font-weight: 800;
+  font-size: clamp(0.5rem, 4vw, 1rem);
+  background-color: var(--btncolor);
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+}
+#contact fieldset form label {
+  color: white;
+}
+#contact fieldset form input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  accent-color: var(--btncolor);
+  color: white;
+  background-color: transparent;
+  border: 1px solid var(--input);
+  border-radius: 0.3rem;
+  width: clamp(3rem, 70vw, 25rem);
+  caret-color: var(--btncolor);
+  margin: 0.4rem 0 1rem 0;
+}
+#contact fieldset form input:focus {
+  outline: 2px solid var(--btncolor);
+}
+#contact fieldset form input::-moz-placeholder {
+  color: rgba(212, 208, 208, 0.531);
+}
+#contact fieldset form input::placeholder {
+  color: rgba(212, 208, 208, 0.531);
+}
+#contact fieldset form select {
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  border: 1px solid var(--btncolor);
+  border-radius: 0.3rem;
+  margin-top: 1rem;
+  background-color: var(--btncolor);
+  color: var(--bg);
+}
+#contact fieldset form select option {
+  font-size: clamp(0.5rem, 2.5vw, 1rem);
+  background-color: var(--bg);
+  color: gray;
+}
+#contact fieldset form select:hover {
+  background-color: var(--bg);
+  color: var(--btncolor);
+}
+#contact fieldset form select:focus {
+  outline: 2px solid var(--btncolor);
+}/*# sourceMappingURL=contact.css.map */

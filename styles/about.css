@@ -4,7 +4,7 @@
   border-radius: 1.5rem;
   display: flex;
   justify-content: space-between;
-  padding: 1rem 2rem;
+  padding: 1rem clamp(0.5rem, 2vw, 2rem);
   align-items: center;
 }
 #about p {
@@ -91,8 +91,9 @@
   border-radius: 0.7rem;
   display: flex;
   align-items: center;
-  padding: 0.5rem clamp(1rem, 2vw, 1.5rem);
+  padding: 0.5rem clamp(1.2rem, 3vw, 1.5rem);
   gap: 1rem;
+  min-width: 15rem;
 }
 #about .contact_info article .icon {
   background-color: rgba(10, 132, 255, 0.0509803922);

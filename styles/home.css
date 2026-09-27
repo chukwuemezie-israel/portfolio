@@ -24,7 +24,7 @@ header #navigations {
   margin: 0.5rem 0;
 }
 header #navigations > a {
-  padding: clamp(0.4rem, 1.5vw, 0.7rem) clamp(0.4rem, 1.5vw, 1rem);
+  padding: clamp(0.4rem, 1.5vw, 0.7rem) clamp(0.3rem, 1.5vw, 1rem);
   text-align: center;
   color: var(--btncolor);
   text-decoration: none;
@@ -39,7 +39,6 @@ header #navigations > a {
 header #navigations > a:hover {
   color: var(--bg);
   background-color: var(--btncolor);
-  box-shadow: 0 0 10px 1 var(--btncolor);
 }
 header #navigations ul {
   list-style: none;
@@ -143,12 +142,6 @@ header #navigations ul a:hover {
   height: 2rem;
   fill: white;
   vertical-align: middle;
-}
-#home .profile::before {
-  content: "";
-  top: 50%;
-  left: 50%;
-  background: radial-gradient(circle at top, transparent, var(--btncolor));
 }
 #home .profile img {
   width: 100%;

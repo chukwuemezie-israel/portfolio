@@ -1,0 +1,87 @@
+#skills {
+  margin-top: 2rem;
+}
+#skills h2 {
+  position: relative;
+  display: inline;
+}
+#skills h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 2rem;
+  width: 50%;
+  background-color: var(--btncolor);
+  height: 3px;
+}
+#skills .container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+}
+#skills .container article {
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background-color: rgba(26, 31, 46, 0.3176470588);
+  flex-basis: 12rem;
+  flex-shrink: 0;
+  padding: 0.5rem 1rem;
+  transition: all 200ms ease-in-out;
+}
+#skills .container article:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 var(--shadowb) var(--shadows) rgba(255, 255, 255, 0.1);
+}
+#skills .container article div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+#skills .container article div svg {
+  height: 2rem;
+  vertical-align: middle;
+}
+#skills .container article div #html {
+  fill: var(--btncolor);
+}
+#skills .container article div #css {
+  fill: var(--btncolor);
+}
+#skills .container article div #js {
+  fill: #f7c70e;
+}
+#skills .container article div #tail {
+  fill: #47b2f0;
+}
+#skills .container article div h3 {
+  font-size: clamp(0.4rem, 3vw, 0.8rem);
+}
+#skills .container article .level {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+#skills .container article .level p {
+  text-align: right;
+  font-size: min(0.6rem, 5vw);
+}
+#skills .container article .level meter {
+  height: 0.6rem;
+  width: 100%;
+}
+
+@media (max-width: 660px) {
+  #skills > .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+  }
+}
+@media (max-width: 450px) {
+  #skills > .container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}/*# sourceMappingURL=skills.css.map */
